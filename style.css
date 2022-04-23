@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    min-height: 100vh;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: minmax(150px, auto) 1fr minmax(100px, auto) / 1fr;
+    grid-template-areas: "header" "main" "footer";
+}
+
+.header,
+.main,
+.footer {
+    display: grid;
+    align-items: center;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(122, 197, 172);
+    padding: 20px;
+}
+
+.header__title,
+.main__title,
+.footer__title {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 75px;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(208, 221, 57);
+    padding-bottom: 20px;
+}
+
+.header__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-gap: 10px;
+}
+
+.header__item {
+    list-style-type: none;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.header__button {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid rgb(240, 248, 255);
+    border-radius: 15px;
+    background-color: rgb(240, 248, 255);
+}
+
+.header__button:hover {
+    background-color: rgba(195, 240, 225, 0.96);
+    text-decoration: underline;
+}
+
+.main {
+    grid-area: main;
+    background-color: rgb(106, 117, 228);
+}
+
+.content__gallery {
+    min-height: auto;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.gallery__items {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.gallery__item {
+    background-color: rgb(12, 248, 248);
+    display: grid;
+}
+
+.gallery__item_big {
+    display: grid;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item_text {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(29, 200, 215);
+}
